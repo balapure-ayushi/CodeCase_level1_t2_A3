@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Courgette&family=El+Messiri:wght@700&family=Libre+Baskerville&family=Outfit&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+
+        }
+        .calculator
+        {
+            width: 60%;
+            height: 50vh;
+            padding: 40px;
+            background: linear-gradient(to bottom, #0d0d0d, #4d4d4d);
+
+            text-align: center;
+            margin: 100px auto;
+        }
+        h2
+        {
+            font-size: 40px;
+            color: aqua;
+            font-family: 'Courgette', cursive;
+        }
+        p{
+            font-size: 25px;
+            color: azure;
+            font-family: 'Cookie', cursive;
+        }
+        input, button
+        {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+        button
+        {
+            width: 15%;
+            cursor: pointer;
+            background-color: #4d4d4d;
+            color: #fff;
+        }
+        button:hover
+        {
+            background-color: #212121;
+        }
+        .result
+
+        {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+
+        <h2>Basic Calculator</h2>
+        <p>Build a basic calculator that adds two 
+            numbers together and displays the 
+            result using JavaScript</p>
+
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <input type="number" id="num2" placeholder="Enter Second Number">
+        <button onclick="Calculator()">Add</button>
+
+        <p id="result"></p>
+
+
+    </div>
+
+
+    <script>
+        function Calculator() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please Enter Valid Number");
+                return;
+            }
+            const sum = num1 + num2;
+            document.getElementById("result").innerText = `Result: ${sum}`;
+        }
+    </script>
+
+
+</body>
+
+</html>
